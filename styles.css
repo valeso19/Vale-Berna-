@@ -1,0 +1,47 @@
+:root{
+  --navy: #0D1B2A;
+  --sky: #A9D6E5;
+  --dry: #A3B18A;
+  --white: #FFFFFF;
+  --muted: #6E7A8A;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, "Poppins", "Montserrat", Arial, sans-serif;margin:0;background:#f7f9fb;color:var(--navy);-webkit-font-smoothing:antialiased}
+.header{background:linear-gradient(90deg,var(--navy),var(--sky));color:var(--white);padding:18px;text-align:center}
+.header h1{margin:0;font-size:18px}
+.container{padding:12px;max-width:980px;margin:0 auto}
+.card{background:var(--white);border-radius:12px;padding:12px;margin-bottom:12px;box-shadow:0 2px 6px rgba(13,27,42,0.06)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+#progressWrap{background:#eee;border-radius:999px;padding:6px}
+#progressBar{background:linear-gradient(90deg,var(--dry),var(--sky));height:20px;border-radius:999px;transition:width .35s;width:0;position:relative}
+#progressBar span{position:absolute;right:8px;color:#fff;font-weight:600;font-size:12px}
+.quick-buttons{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.section-btn{background:var(--navy);color:#fff;padding:8px 10px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+.small-controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.small-controls button{padding:8px 10px;border-radius:8px;border:1px solid #ddd;background:#fff;cursor:pointer}
+
+.footer{text-align:center;padding:12px;color:var(--muted);font-size:13px}
+
+/* view area */
+.view-header{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:10px}
+.item-list{display:flex;flex-direction:column;gap:8px}
+.item{display:flex;justify-content:space-between;align-items:center;padding:8px;border-radius:8px;border:1px dashed #eee;background:#fafafa}
+.item .left{display:flex;flex-direction:column}
+.item .right{display:flex;gap:8px;align-items:center}
+.badge{padding:4px 8px;border-radius:8px;font-size:12px}
+
+/* forms */
+.form-row{display:flex;gap:8px;flex-wrap:wrap}
+.input,textarea,select{padding:8px;border-radius:8px;border:1px solid #ddd;width:100%}
+input[type="number"]{max-width:160px}
+.actions{display:flex;gap:8px;margin-top:8px}
+.btn{padding:8px 10px;border-radius:8px;border:0;cursor:pointer}
+.btn.primary{background:var(--navy);color:#fff}
+.btn.warn{background:#f0ad4e;color:#fff}
+.btn.ghost{background:#fff;border:1px solid #ddd}
+
+/* responsive */
+@media (max-width:640px){
+  .header h1{font-size:16px}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+}\n
